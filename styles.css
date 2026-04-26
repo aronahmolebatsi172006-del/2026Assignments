@@ -164,3 +164,10 @@ nav.topnav {
 .quick-links-list a:hover {
   text-decoration: underline;
 }
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* left column | right column */
+    gap: 48px;
+    padding: 60px 5%;
+}
