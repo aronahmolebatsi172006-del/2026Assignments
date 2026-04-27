@@ -1,5 +1,5 @@
 console.log("JavaScript is connected!");
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -114,4 +114,15 @@ function filterMenu(category) {
       item.style.display = 'none';
     }
   });
+}
+var i = 0;
+var txt = 'Lorem ipsum typing effect!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
 }
