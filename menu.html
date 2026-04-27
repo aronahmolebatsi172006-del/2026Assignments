@@ -26,14 +26,155 @@
  <a href="contact.html">contact</a>
  <a href="gallery.html">gallery</a>
 </div> 
+
+<button onclick="openCart()" class="btn btn-dark">🛒 View Order</button>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </nav>
-my content goes here
 
 
+<div class="container mt-5">
 
+  <h2 class="text-center mb-4">Our Menu</h2>
+
+  
+  <div class="text-center mb-4">
+    <button class="btn btn-dark me-2" onclick="filterMenu('all')">All Items</button>
+    <button class="btn btn-dark me-2" onclick="filterMenu('hot')">Hot Drinks</button>
+    <button class="btn btn-dark me-2" onclick="filterMenu('cold')">Cold Drinks</button>
+    <button class="btn btn-dark me-2" onclick="filterMenu('pastry')">Pastries</button>
+    <button class="btn btn-dark me-2" onclick="filterMenu('special')">Specials</button>
+  </div>
+
+  
+  <div class="row" id="menuGrid">
+
+    
+    <div class="col-md-3 mb-4 menu-item" data-category="hot">
+      <div class="card">
+        <img src="Arona's cs/cappuccino.jpg" class="card-img-top" alt="Cappuccino">
+        <div class="card-body">
+          <h5 class="card-title">Cappuccino</h5>
+          <p class="card-text">Espresso with steamed milk and thick foam.</p>
+          <p class="fw-bold">P25.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Cappuccino', 25)">Add to Pickup Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4 menu-item" data-category="hot">
+      <div class="card">
+        <img src="Arona's cs/Americano.png" class="card-img-top" alt="Americano">
+        <div class="card-body">
+          <h5 class="card-title">Americano</h5>
+          <p class="card-text">Espresso shots topped with hot water.</p>
+          <p class="fw-bold">P20.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Americano', 20)">Add to Pickup Order</button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4 menu-item" data-category="hot">
+      <div class="card">
+        <img src="Arona's cs/Hot chocolate.png" class="card-img-top" alt="Hot Chocolate">
+        <div class="card-body">
+          <h5 class="card-title">Hot Chocolate</h5>
+          <p class="card-text">Rich creamy chocolate with whipped cream.</p>
+          <p class="fw-bold">P24.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Hot Chocolate', 24)">Add to Pickup Order</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 mb-4 menu-item" data-category="cold">
+      <div class="card">
+        <img src="Arona's cs/Caramel.png" class="card-img-top" alt="Iced Latte">
+        <div class="card-body">
+          <h5 class="card-title">Iced Caramel Latte</h5>
+          <p class="card-text">Espresso, cold milk and caramel over ice.</p>
+          <p class="fw-bold">P35.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Iced Caramel Latte', 35)">Add to Pickup Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4 menu-item" data-category="cold">
+      <div class="card">
+        <img src="Arona's cs/Lemonade.png" class="card-img-top" alt="Lemonade">
+        <div class="card-body">
+          <h5 class="card-title">Lemonade</h5>
+          <p class="card-text">Freshly squeezed lemon juice with mint.</p>
+          <p class="fw-bold">P18.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Lemonade', 18)">Add to Pickup Order</button>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-3 mb-4 menu-item" data-category="pastry">
+      <div class="card">
+        <img src="Arona's cs/Croissant.png" class="card-img-top" alt="Croissant">
+        <div class="card-body">
+          <h5 class="card-title">Butter Croissant</h5>
+          <p class="card-text">Golden, flaky and buttery — baked fresh daily.</p>
+          <p class="fw-bold">P18.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Butter Croissant', 18)">Add to Pickup Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4 menu-item" data-category="pastry">
+      <div class="card">
+        <img src="Arona's cs/Muffin.png" class="card-img-top" alt="Muffin">
+        <div class="card-body">
+          <h5 class="card-title">Vanilla Muffin</h5>
+          <p class="card-text">Soft moist muffin with sweet vanilla glaze.</p>
+          <p class="fw-bold">P15.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Vanilla Muffin', 15)">Add to Pickup Order</button>
+
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="col-md-3 mb-4 menu-item" data-category="special">
+      <div class="card">
+        <img src="Arona's cs/special.png" class="card-img-top" alt="Special">
+        <div class="card-body">
+          <h5 class="card-title">Morning Combo</h5>
+          <p class="card-text">Any hot drink and a croissant at a special price.</p>
+          <p class="fw-bold">P38.00</p>
+          <button class="btn btn-dark w-100" onclick="addToCart('Morning Combo', 38)">Add to Pickup Order</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+</div>
+
+<!-- CART MODAL -->
+<div id="cartModal" style="display:none; position:fixed; top:0; right:0; width:320px; height:100%; background:white; box-shadow:-4px 0 10px rgba(0,0,0,0.2); z-index:9999; padding:20px; overflow-y:auto;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+    <h4>🛒 Your Pickup Order</h4>
+    <button onclick="closeCart()" class="btn btn-dark">✕</button>
+  </div>
+  <div id="cartItems"></div>
+  <hr>
+  <h5>Total: P<span id="cartTotal">0</span>.00</h5>
+  <p><i>Pay when you collect at the shop</i></p>
+  <div style="margin-top:20px;">
+    <button onclick="clearCart()" class="btn btn-outline-dark w-100 mb-2">Clear Order</button>
+    <button onclick="confirmOrder()" class="btn btn-dark w-100">Confirm Order</button>
+  </div>
+</div>
 
 <footer class="bg-dark text-white text-center p-3 mt-5"> 
 
