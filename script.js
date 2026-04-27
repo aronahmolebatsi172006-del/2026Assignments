@@ -1,5 +1,26 @@
 console.log("JavaScript is connected!");
 
+// === THEME TOGGLE ===
+function toggleTheme() {
+  document.body.classList.toggle('dark-mode');
+  const btn = document.getElementById('themeBtn');
+  if (document.body.classList.contains('dark-mode')) {
+    btn.textContent = '☀️ Light';
+  } else {
+    btn.textContent = '🌙 Dark';
+  }
+}
+
+// Remember theme on page load
+window.onload = function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    document.body.classList.add('dark-mode');
+    const btn = document.getElementById('themeBtn');
+    if (btn) btn.textContent = '☀️ Light';
+  }
+}
+
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {

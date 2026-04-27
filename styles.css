@@ -285,3 +285,127 @@ input[type="button"]:hover {
     width: 100%;
   }
 }
+
+/* === FONTS === */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+/* === IMAGE HOVER EFFECT === */
+.row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.20);
+}
+
+.hero {
+  background-image: url("Arona's cs/shop image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 40px 20px;
+}
+
+.hero-content h1 {
+  color: var(--gold) !important;
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+
+.hero-content h3 {
+  color: #f0e6d3 !important;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+/* === BUTTONS === */
+.btn-dark {
+  background-color: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: var(--espresso-black) !important;
+  font-weight: 700 !important;
+}
+
+.btn-dark:hover {
+  background-color: #b3922a !important;
+  border-color: #b3922a !important;
+  color: var(--espresso-black) !important;
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+  background: #0f0a05 !important;
+  color: #f8ead2 !important;
+}
+
+body.dark-mode .card {
+  background: #1a100a !important;
+  color: #f8ead2 !important;
+  border-color: #3a2a1a !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode p {
+  color: #f8ead2 !important;
+}
+
+body.dark-mode .feedback-section {
+  background: #1a100a !important;
+  color: #f8ead2 !important;
+}
+
+body.dark-mode .feedback-section h2 {
+  color: #f8ead2 !important;
+}
+
+body.dark-mode .feedback-section p {
+  color: #d4b896 !important;
+}
+
+body.dark-mode .feedback-form label {
+  color: #f8ead2 !important;
+}
+
+body.dark-mode .feedback-form input,
+body.dark-mode .feedback-form textarea {
+  background: #2a1a0a !important;
+  color: #f8ead2 !important;
+  border-color: #3a2a1a !important;
+}
